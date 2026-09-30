@@ -100,6 +100,18 @@ The level meter is the RMS of the captured blocks; the elapsed clock and meter t
 
 Exercised against omp 18.4.4 on Arch (PipeWire 1.x) with `fermion serve --model phonon-2`: live partials growing phrase-by-phrase, insert-without-send (session transcript stays empty), a second Enter sending exactly the inserted text, Esc discarding streamed text, `/dictate N` auto-insert, and the unreachable-endpoint error path. Audio was driven through a virtual PipeWire source so the capture path (`pw-record` → WebSocket) is the same one used with a real microphone.
 
+## Development
+
+The checkout is the source of truth — nothing is copied into `~/.omp/agent/extensions`:
+
+```sh
+git clone git@github.com:IlyaasK/omp-dictate.git
+cd omp-dictate
+omp plugin link .      # omp loads extensions/dictate.ts from this working tree
+```
+
+Edit `extensions/dictate.ts` and restart omp (extension modules are read at startup; the loader cache-busts on mtime, but a new session is the reliable path). Test with `/dictate` in the TUI, then `git add -A && git commit && git push`. Bump `version` in `package.json` and the catalog entry in `.omp-plugin/marketplace.json` together when behaviour changes.
+
 ## License
 
 MIT — see [LICENSE](LICENSE).
