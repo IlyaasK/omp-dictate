@@ -1,0 +1,28 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "omp-dictate",
+  "owner": {
+    "name": "Ilyaas Yusuf Kapadia"
+  },
+  "metadata": {
+    "description": "Live local dictation for omp",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "dictate",
+      "description": "Live local dictation into the composer: /dictate streams speech-to-text as you speak; Enter inserts the transcript without sending it",
+      "source": "./",
+      "version": "1.0.0",
+      "category": "productivity",
+      "license": "MIT",
+      "homepage": "https://github.com/IlyaasK/omp-dictate",
+      "repository": "IlyaasK/omp-dictate",
+      "keywords": [
+        "dictation",
+        "speech-to-text",
+        "voice"
+      ]
+    }
+  ]
+}

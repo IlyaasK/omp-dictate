@@ -1,0 +1,49 @@
+{
+  "name": "omp-dictate",
+  "version": "1.0.0",
+  "description": "omp extension: /dictate — live local dictation into the composer, streaming Phonon-2 speech-to-text as you speak",
+  "type": "module",
+  "license": "MIT",
+  "author": "Ilyaas Yusuf Kapadia",
+  "homepage": "https://github.com/IlyaasK/omp-dictate",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IlyaasK/omp-dictate.git"
+  },
+  "bugs": "https://github.com/IlyaasK/omp-dictate/issues",
+  "keywords": [
+    "omp-package",
+    "omp-extension",
+    "omp",
+    "dictation",
+    "speech-to-text",
+    "stt",
+    "phonon",
+    "fermion",
+    "pipewire",
+    "voice"
+  ],
+  "files": [
+    "extensions",
+    "README.md",
+    "LICENSE",
+    ".omp-plugin"
+  ],
+  "omp": {
+    "extensions": [
+      "./extensions/dictate.ts"
+    ]
+  },
+  "peerDependencies": {
+    "@oh-my-pi/pi-coding-agent": "*",
+    "@oh-my-pi/pi-tui": "*"
+  },
+  "peerDependenciesMeta": {
+    "@oh-my-pi/pi-coding-agent": {
+      "optional": true
+    },
+    "@oh-my-pi/pi-tui": {
+      "optional": true
+    }
+  }
+}
